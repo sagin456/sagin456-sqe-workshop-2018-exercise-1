@@ -59,7 +59,6 @@ function handle_while(to_parse){
     return block_types_to_funcs_dic[to_parse.body.type](to_parse.body);
 }
 
-
 function handle_func_dec(to_parse){
     rows.push([to_parse.loc.start.line, 'function declaration', to_parse.id.name, '', '']);
     for(let i=0; i< to_parse.params.length; i++){
